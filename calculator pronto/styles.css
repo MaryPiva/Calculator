@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ebe2ea,#e420c3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#calculadora {
+    background-color: #ecc3ea;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(22, 21, 21, 0.2);
+    padding: 25px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+input {
+    grid-column: span 4;
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+   
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.operator {
+    background: #0e0d0d;
+    color: #fff;
+}
+
+button.equal {
+    background: #1a1619;
+    color: #fff;
+}
+
+button.number {
+    background: #e420c3;
+    color: #fff;
+}
+button.clear {
+    background: #1a1619;
+    color: #fff;
+}
+button:active {
+    transform: scale(0.95);
+}
